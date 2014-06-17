@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Shopatron Build Status",
+  "description": "This extension displays build status on github for shopatron projects",
+  "version": "1.0",
+
+  "permissions": [
+    "http://jenkins.cloudatron.com/",
+    "https://github.com/"
+  ],
+"content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["build-status.js"]
+    }
+  ]
+}
